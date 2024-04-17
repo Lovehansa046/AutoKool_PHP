@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/controllerAdmin/ControllerAdminNews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/controllerAdmin/controllerAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/modelAdmin/modelAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/css/mystyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/js/ajaxupload.3.5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/js/jquery-3.1.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/public/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/routeAdmin/routingAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/error404.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/formLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsAddForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsEditForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/startAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/Database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Comments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/News.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/mystyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/routing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style_main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ViewComments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ViewNews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/allnews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/answerRegister.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/category_CarSchool.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/catnews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/error404.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/formRegister.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/readnews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/start.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2fE01rIwC8zV79WPTE8PLooZwJY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/xampp/htdocs/AutoKool",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="" />
+      <created>1713350717198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713350717198</updated>
+      <workItem from="1713350718302" duration="126000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>
