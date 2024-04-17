@@ -3,3 +3,145 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.lead {
+    margin: 40px 0 10px 0;
+    display: block;
+    text-align: center;
+}
+
+.category-card {
+    height: 300px;
+}
+
+.text {
+    margin-top: 40px;
+}
+
+.text-primary {
+    display: block;
+    margin: 40px;
+}
+
+.list-group {
+    margin-top: 50px;
+}
+
+/*.contact-info {*/
+/*    height: 100px;*/
+/*    !*display: block;*!*/
+/*    !*text-align: justify;*!*/
+/*    !*padding-right: 100px;*!*/
+/*    !*margin-right: 300px;*!*/
+/*}*/
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Noto Serif', serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    padding-top: 60px; /* Отступ сверху для фиксированного навигационного меню */
+}
+
+/* Стили для заголовков */
+h2, h3 {
+    color: #007bff; /* Цвет заголовков */
+}
+
+.container-primary {
+    display: inline-block;
+}
+
+.container-about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/*!* Стили для навигационного меню *!*/
+/*.navbar {*/
+/*    background-color: #ffffff; !* Цвет фона навигационного меню *!*/
+/*    border-bottom: 1px solid #ddd; !* Граница снизу *!*/
+/*}*/
+
+/*!* Стили для заголовка шапки *!*/
+/*header {*/
+/*    background-color: #007bff; !* Цвет фона *!*/
+/*    color: #ffffff; !* Цвет текста *!*/
+/*    padding: 100px 0; !* Внутренние отступы *!*/
+/*    text-align: center;*/
+/*}*/
+
+/*!* Стили для основного контента *!*/
+/*main {*/
+/*    padding: 30px 15px; !* Внутренние отступы *!*/
+/*}*/
+
+/*!* Стили для карточек курсов *!*/
+/*.category-card {*/
+/*    height: 100%; !* Высота карточек *!*/
+/*    border: 1px solid #ddd; !* Граница *!*/
+/*    border-radius: 8px; !* Радиус скругления углов *!*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); !* Тень *!*/
+/*    transition: box-shadow 0.3s ease-in-out; !* Плавный переход для тени *!*/
+/*}*/
+
+/*.category-card:hover {*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); !* Тень при наведении *!*/
+/*}*/
+
+/*!* Стили для контактной информации *!*/
+/*.contact-info {*/
+/*    margin-top: 50px; !* Отступ сверху *!*/
+/*}*/
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+
+    .container-about {
+        display: inline-block;
+    }
+
+    .head-text {
+        font-size: 48px;
+    }
+    /* Стили для мобильных устройств */
+    header {
+        padding: 80px 0; /* Уменьшенные внутренние отступы */
+    }
+
+
+    .category-card {
+        margin-bottom: 30px; /* Отступ между карточками */
+    }
+}
+
+@media (max-width: 576px) {
+
+    .container-about {
+        display: inline-block;
+    }
+
+    .head-text {
+        font-size: 48px;
+    }
+    /* Дополнительные стили для узких мобильных устройств */
+    header {
+        padding: 60px 0; /* Дополнительно уменьшенные внутренние отступы */
+    }
+
+    .category-card {
+        margin-bottom: 20px; /* Уменьшенный отступ между карточками */
+    }
+}
