@@ -49,4 +49,19 @@ class ViewNews
             echo "<p style='background-color:#000000;'>" . $value['text'] . "</p><br>";
         }
     }
+    
+//    public static function viewCategory($arr){
+//        foreach ($arr as $value) {
+//            echo "<div class='col-md-4 mb-4'>
+//                <div class='card category-card'>
+//                    <div class='card-body'>
+//                        <h3 class='card-title'>". $value['title'] . "</h3>
+//                        <h3 class='card-title'>(sõiduauto)</h3>
+//                        <p class='card-text'>Intensiivne kursus sõiduauto juhtimiseks, valmistudes teooria- ja praktilisele
+//                            eksamile.</p>
+//                    </div>
+//                </div>
+//            </div>";
+//        }
+//    }
 }

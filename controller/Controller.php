@@ -5,7 +5,7 @@ class Controller
 
     public static function startSite()
     {
-        $arr = News::getLast3News();
+        $arr = Category::getAllCategory();
         include_once 'view/start.php';
     }
 
@@ -19,6 +19,12 @@ class Controller
     {
         $arr = Category::getAllCategory();
         include_once 'view/category_CarSchool.php';
+    }
+
+    public static function categoryInfo()
+    {
+        $arr = Category::getAllCategory();
+        include_once 'view/category_info.php';
     }
 
     public static function allNews()

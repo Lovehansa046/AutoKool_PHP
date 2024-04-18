@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="AKPHP-17, AKPHP-16 - создание главной страницы и всех адаптивов" />
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="AKPHP-17 - создание главной страницы и всех адаптивов">
+      <change afterPath="$PROJECT_DIR$/model/Info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/category_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ViewNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ViewNews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/start.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/start.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +46,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2fE01rIwC8zV79WPTE8PLooZwJY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +59,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/AutoKool&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/AutoKool/view&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,6 +68,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AutoKool\view" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1713350717198</updated>
       <workItem from="1713350718302" duration="309000" />
-      <workItem from="1713381734604" duration="6755000" />
+      <workItem from="1713381734604" duration="10714000" />
+      <workItem from="1713468641803" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -93,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713388540821</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AKPHP-17 AKPHP-16 - создание главной страницы и всех адаптивов">
+      <option name="closed" value="true" />
+      <created>1713388588776</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713388588776</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +136,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="AKPHP-17, AKPHP-16 - создание главной страницы и всех адаптивов" />
-    <option name="LAST_COMMIT_MESSAGE" value="AKPHP-17, AKPHP-16 - создание главной страницы и всех адаптивов" />
+    <MESSAGE value="AKPHP-17 AKPHP-16 - создание главной страницы и всех адаптивов" />
+    <MESSAGE value="AKPHP-17 - создание главной страницы и всех адаптивов" />
+    <option name="LAST_COMMIT_MESSAGE" value="AKPHP-17 - создание главной страницы и всех адаптивов" />
   </component>
 </project>
