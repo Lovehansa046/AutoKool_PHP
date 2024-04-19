@@ -1,4 +1,5 @@
 <?php
+
 class ModelAdmin
 {
     // АВТОРИЗАЦИЯ АДМИНА
@@ -23,10 +24,11 @@ class ModelAdmin
                         $loginEmail = strtolower($_POST['email']);
                         $password = $_POST['password'];
                         if ($loginEmail == $item['email'] && password_verify(
-                            $password,
-                            $item['password']
-                        )) {
+                                $password,
+                                $item['password']
+                            )) {
                             $_SESSION['sessionId'] = session_id();
+                            $_SESSION['email'] = $item['email'];
                             $_SESSION['userId'] = $item['id'];
                             $_SESSION['name'] = $item['username'];
                             $_SESSION['status'] = $item['status'];
@@ -40,12 +42,14 @@ class ModelAdmin
         // https://php.ru/manual/function.password-hash.html
         // https://php.ru/manual/function.password-verify.html
     }
+
     // ВЫХОД ИЗ АДМИНКИ
     public static function userLogout()
     {
         unset($_SESSION['sessionId']);
         unset($_SESSION['userId']);
         unset($_SESSION['name']);
+        unset($_SESSION['email']);
         unset($_SESSION['status']);
         session_destroy();
         return;
