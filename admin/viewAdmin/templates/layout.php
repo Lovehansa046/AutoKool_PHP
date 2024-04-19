@@ -108,18 +108,46 @@
                 </div>
             </nav>
 
-        <?php else : ?>
-            <div style="padding: 20px; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 5px;">
-                <h4 style="margin-top: 0;">У вас нет прав доступа!</h4>
-                <p>Извините, у вас нет необходимых прав для просмотра этой страницы или выполнения данного действия.</p>
-                <p>Пожалуйста, обратитесь к администратору или получите соответствующие права доступа для продолжения.</p>
-            </div>
+        <?php elseif (isset($_SESSION["status"]) && $_SESSION["status"] == "user") : ?>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <!-- Логотип -->
+                    <a class="navbar-brand" href="../" target="_blank">WEB SITE</a>;
+
+                    <!-- Кнопка "бургер" для мобильных устройств -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Список ссылок в навигационной панели -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="categoryAdmin">Categories</a>-->
+<!--                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="newsAdmin">Request</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout">Logout <i class="fas fa-sign-out-alt"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         <?php endif; ?>
 
     <?php else : ?>
         <!-- Сообщение об ошибке для неавторизованных пользователей -->
-        <div class="alert alert-danger text-center" role="alert">
-            <strong>У вас нет прав доступа!</strong>
+        <div style="padding: 20px; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 5px;">
+            <h4 style="margin-top: 0;">У вас нет прав доступа!</h4>
+            <p>Извините, у вас нет необходимых прав для просмотра этой страницы или выполнения данного действия.</p>
+            <p>Пожалуйста, обратитесь к администратору или получите соответствующие права доступа для продолжения.</p>
         </div>
     <?php endif; ?>
 </div>
