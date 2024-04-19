@@ -1,6 +1,10 @@
 <?php
 class ControllerAdmin
 {
+
+    public static function PersonalAccount() {
+        include_once ('viewAdmin/PersonalAccount.php');
+    }
     public static function formLoginSite()
     {
         include_once('viewAdmin/formLogin.php');
@@ -10,7 +14,7 @@ class ControllerAdmin
     {
         $logIn = ModelAdmin::userAuthentication();
         if (isset($logIn) and $logIn == true) {
-            include_once('viewAdmin/startAdmin.php');
+            include_once('viewAdmin/PersonalAccount.php');
         } else {
             $_SESSION['errorString'] = 'Неправильное имя пользователя или пароль';
             include_once('viewAdmin/formLogin.php');

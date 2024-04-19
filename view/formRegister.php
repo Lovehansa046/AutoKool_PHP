@@ -1,3 +1,70 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!---->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Register User</title>-->
+<!--    <link href="public/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link href="public/css/login.css" rel="stylesheet">-->
+<!--    <style>-->
+<!--        /* Немного кастомных стилей для формы */-->
+<!--        body {-->
+<!--            background-color: #f8f9fa;-->
+<!--            height: 100vh;-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--        }-->
+<!--        .form-container {-->
+<!--            max-width: 400px;-->
+<!--            padding: 20px;-->
+<!--            background-color: #fff;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!---->
+<!--<body>-->
+<!--<div class="container">-->
+<!---->
+<!--    <div class="panel-heading">-->
+<!--        <h3>Register</h3>-->
+<!--    </div>-->
+<!---->
+<!--    <form class="form-horizontal" role="form" method="POST" action="registerAnswer">-->
+<!--        <div class="form-group">-->
+<!--            <label for="username">Имя пользователя</label>-->
+<!--            <input type="text" class="form-control" id="username" name="username" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="email">Email</label>-->
+<!--            <input type="email" class="form-control" id="email" name="email" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="password">Пароль</label>-->
+<!--            <input type="password" class="form-control" id="password" name="password" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="confirm_password">Подтвердите пароль</label>-->
+<!--            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--                <button type="submit" class="btn btn-primary" name="save">-->
+<!--                    Register-->
+<!--                </button>-->
+<!---->
+<!--        </div>-->
+<!--    </form>-->
+<!---->
+<!--    <div class="mt-4 text-center">-->
+<!--        <a href="./" class="btn btn-secondary btn-sm" role="button">Вернуться на сайт</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,36 +83,37 @@
             justify-content: center;
             align-items: center;
         }
+
         .form-container {
             max-width: 400px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 <div class="form-container">
-    <h2 class="text-center mb-4">Регистрация</h2>
-    <form>
+    <h2 class="text-center mb-4">Register</h2>
+    <form class="form-horizontal" role="form" method="POST" action="registerAnswer">
         <div class="form-group">
-            <label for="username">Имя пользователя</label>
-            <input type="text" class="form-control" id="username" name="username" required>
+            <label for="username">User Name</label>
+            <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <input id="email" type="email" class="form-control" name="email" value="" required>
         </div>
         <div class="form-group">
             <label for="password">Пароль</label>
-            <input type="password" class="form-control" id="password" name="password" required>
+            <input id="password" type="password" class="form-control" name="password" required>
         </div>
         <div class="form-group">
             <label for="confirm_password">Подтвердите пароль</label>
-            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+            <input id="password-confirm" type="password" class="form-control" name="confirm" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+        <button type="submit" class="btn btn-primary btn-block" name="save">Зарегистрироваться</button>
     </form>
 
     <div class="mt-4 text-center">
@@ -58,4 +126,38 @@
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
+
+
+<!---->
+<!--<div class="form-container">-->
+<!--    <h2 class="text-center mb-4">Регистрация</h2>-->
+<!--    <form class="form-horizontal" role="form" method="POST" action="registerAnswer">-->
+<!--        <div class="form-group">-->
+<!--            <label for="username">Имя пользователя</label>-->
+<!--            <input type="text" class="form-control" id="username" name="username" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="email">Email</label>-->
+<!--            <input type="email" class="form-control" id="email" name="email" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="password">Пароль</label>-->
+<!--            <input type="password" class="form-control" id="password" name="password" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="confirm_password">Подтвердите пароль</label>-->
+<!--            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary btn-block" name="save">Зарегистрироваться</button>-->
+<!--    </form>-->
+<!---->
+<!--    <div class="mt-4 text-center">-->
+<!--        <a href="./" class="btn btn-secondary btn-sm" role="button">Вернуться на сайт</a>-->
+<!--    </div>-->
+<!---->
+<!--</div>-->
+
+</body>
+
 </html>
