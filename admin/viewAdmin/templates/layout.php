@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +40,7 @@
         .profile-card .form-group {
             margin-bottom: 20px;
         }
+
         .navbar-brand {
             font-weight: bold;
             font-size: 24px;
@@ -67,7 +66,6 @@
         }
 
 
-
         .navbar-nav .nav-link:hover {
             color: #f8f9fa; /* Цвет текста ссылок при наведении */
         }
@@ -84,7 +82,8 @@
                     <a class="navbar-brand" href="../" target="_blank">WEB SITE</a>;
 
                     <!-- Кнопка "бургер" для мобильных устройств -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -99,6 +98,9 @@
                                 <a class="nav-link" href="newsAdmin">News List</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="logout">Logout <i class="fas fa-sign-out-alt"></i></a>
                             </li>
                         </ul>
@@ -106,48 +108,53 @@
                 </div>
             </nav>
 
-        <?php else : ?>
-            <h4>У вас нет прав!</h4>
+        <?php elseif (isset($_SESSION["status"]) && $_SESSION["status"] == "user") : ?>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <!-- Логотип -->
+                    <a class="navbar-brand" href="../" target="_blank">WEB SITE</a>;
+
+                    <!-- Кнопка "бургер" для мобильных устройств -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Список ссылок в навигационной панели -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="categoryAdmin">Categories</a>-->
+<!--                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="newsAdmin">Request</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout">Logout <i class="fas fa-sign-out-alt"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         <?php endif; ?>
 
     <?php else : ?>
         <!-- Сообщение об ошибке для неавторизованных пользователей -->
-        <div class="alert alert-danger text-center" role="alert">
-            <strong>У вас нет прав доступа!</strong>
+        <div style="padding: 20px; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 5px;">
+            <h4 style="margin-top: 0;">У вас нет прав доступа!</h4>
+            <p>Извините, у вас нет необходимых прав для просмотра этой страницы или выполнения данного действия.</p>
+            <p>Пожалуйста, обратитесь к администратору или получите соответствующие права доступа для продолжения.</p>
         </div>
     <?php endif; ?>
-    <div class="profile-card">
-        <h2>Личный кабинет</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Имя пользователя</label>
-                <input type="text" class="form-control" id="username" value="<?php echo htmlspecialchars($_SESSION["name"]); ?>" disabled>
-            </div>
-<!--            <div class="form-group">-->
-<!--                <label for="email">Email</label>-->
-<!--                <input type="email" class="form-control" id="email" value="--><?php //echo htmlspecialchars($_SESSION["e"]); ?><!--" disabled>-->
-<!--            </div>-->
-            <div class="form-group">
-                <label for="password">Новый пароль</label>
-                <input type="password" class="form-control" id="password" placeholder="Введите новый пароль">
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Подтвердите пароль</label>
-                <input type="password" class="form-control" id="confirm-password" placeholder="Повторите новый пароль">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Сохранить изменения</button>
-        </form>
-        <hr>
-        <div class="text-center">
-            <a href="#" class="text-danger">Удалить аккаунт</a>
-        </div>
-        <div class="text-center mt-3">
-            <a href="logout" class="btn btn-outline-danger">Выйти <i class="fas fa-sign-out-alt"></i></a>
-        </div>
-
-    </div>
 </div>
 
+<div id="content" style="padding-top:20px;">
+    <?php echo $content; ?>
+</div>
 <!-- Подключаем Bootstrap JS (необходим для работы некоторых компонентов) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
 </body>
