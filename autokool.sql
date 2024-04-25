@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 25 2024 г., 09:50
--- Версия сервера: 10.4.28-MariaDB
--- Версия PHP: 8.2.4
+-- Время создания: Апр 26 2024 г., 00:18
+-- Версия сервера: 10.4.32-MariaDB
+-- Версия PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,20 +30,13 @@ USE `autokool`;
 --
 
 CREATE TABLE `application` (
-  `application_id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  `application_date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Дамп данных таблицы `application`
---
-
-INSERT INTO `application` (`application_id`, `user_id`, `category_id`, `application_date`) VALUES
-(1, 1, 1, '2024-04-26'),
-(2, 2, 2, '2024-04-23'),
-(3, 3, 3, '2024-04-22');
+  `id` int(11) NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `LastName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `username` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -100,25 +93,35 @@ INSERT INTO `staff` (`staff_id`, `staff_name`, `staf_license`, `staff_foto`, `st
 --
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(55) DEFAULT NULL,
-  `user_picture` mediumblob DEFAULT NULL,
-  `user_email` varchar(55) DEFAULT NULL,
-  `telefon` varchar(15) DEFAULT NULL,
-  `user_login` varchar(55) DEFAULT NULL,
-  `user_password` varchar(22) DEFAULT NULL,
-  `user_status` varchar(30) DEFAULT NULL,
-  `registration_date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `picture` blob DEFAULT NULL,
+  `job` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `telefon` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `login` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `registration_date` date NOT NULL,
+  `pass` varchar(255) DEFAULT NULL,
+  `Name` varchar(100) NOT NULL,
+  `LastName` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_picture`, `user_email`, `telefon`, `user_login`, `user_password`, `user_status`, `registration_date`) VALUES
-(1, 'Nikita', 0x5b76616c75652d335d, 'example1@gmail.com', '+372 1521562', 'Nikita', '12345', 'Anonim', '2024-04-25'),
-(2, 'Bogdan', 0x5b76616c75652d335d, 'example2@gmail.com', '+372 51252156', 'Bogdan', '12345', 'Admin', '2024-04-25'),
-(3, 'Artjom', 0x5b76616c75652d335d, 'example3@gmail.com', '+372 56712937', 'Artjom', '12345', 'Admin', '2024-04-25');
+INSERT INTO `users` (`id`, `username`, `picture`, `job`, `email`, `telefon`, `login`, `password`, `status`, `registration_date`, `pass`, `Name`, `LastName`) VALUES
+(1, 'Admin', NULL, 'Portal admin', 'admin@newsportal.ee', '+37251456', 'admin', '$2y$12$pxB2ofiiNZkxObmbBvBOyegwCjHCVFYhapjiSsdYXUaJ9Z1IH6pQW', 'admin', '2019-11-05', '123456', '', ''),
+(2, 'Anonim', NULL, 'Portal anonim', 'admin@newsportal.ee', '+37251456', 'anonim', '$2y$10$dYK1sCogKL/zZBef.V/gBeynL5mdt0QxZlwvEUBkS0jkdXYRMPHRa', 'user', '2019-11-05', '111111', '', ''),
+(3, 'Artjom', NULL, '', 'artjom.plotnikov@ivkhk.ee', '', '', '$2y$10$gvXYv78vvROxvev7R5OlP.bX4R8WPeIySUD5hBh6ESEcSUrhCC8di', 'user', '2024-04-15', '12345678', '', ''),
+(4, 'artjomplotnikov2017@gmail.com', NULL, '', 'saveDBcountries@gmail.com', '', '', '$2y$10$MSI5EyhjTdeeeYRqIpm1DuIs7rmIrLuFqcbTZPnTR.FKsRuLukdia', 'user', '2024-04-15', 'saveDBcountries', '', ''),
+(5, 'Artjom Plotnikov', NULL, '', 'artjomplotnikov2017@gmail.com', '', '', '$2y$10$mZkLCr7jKyRAV.QvQvH9Xug8sr0zP2.kHui4pqrNe6CwxvpRLDZru', 'user', '2024-04-16', '12345678', '', ''),
+(6, 'saveDBcountries', NULL, '', 'artjomplotnikov2017@gmail.com', '', '', '$2y$10$CgnPTXWkYm47bFG.Hbu9beisA2e3ytl2CUi9W.S3Dnyh.BGVTdBFO', 'user', '2024-04-21', '123456', '', ''),
+(7, 'saveDBcountries', NULL, '', '123test@test.ee', '', '', '$2y$10$.dv4HAoiUBGCERjhYI4KVewhCb.J8EuY.koUmNaa5TcByYFa2vFOu', 'user', '2024-04-21', '123456', '', ''),
+(8, '123test@test.ee', NULL, '', 'artjom.plotnikov@ivkhk.ee', '', '', '$2y$10$cgMwhS98MX/6fkoZKiZczuYjwEtRSKrGWtk.Z.TixWuLNwTdY4Zam', 'user', '2024-04-21', '123456', '', ''),
+(9, 'test@test.ivkhk.ee', NULL, '', 'test@test.ivkhk.ee', '', '', '$2y$10$kNZmRNkf0a3dr.TylMCBNuKIXUYcGqP/IkdcSpIbg.WmqYQrgjMD6', 'user', '2024-04-25', '123456', '', '');
 
 --
 -- Индексы сохранённых таблиц
@@ -128,9 +131,9 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_picture`, `user_email`, `tele
 -- Индексы таблицы `application`
 --
 ALTER TABLE `application`
-  ADD PRIMARY KEY (`application_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `category_id` (`category_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `category_id` (`category_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Индексы таблицы `category`
@@ -149,7 +152,7 @@ ALTER TABLE `staff`
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -159,7 +162,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `application`
 --
 ALTER TABLE `application`
-  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
@@ -177,7 +180,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -187,8 +190,8 @@ ALTER TABLE `users`
 -- Ограничения внешнего ключа таблицы `application`
 --
 ALTER TABLE `application`
-  ADD CONSTRAINT `application_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `application_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`);
+  ADD CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`),
+  ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `staff`
