@@ -26,13 +26,18 @@
             <form method="POST" action="newsAddResult" enctype="multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
-                        <td>News title</td>
-                        <td><input type="text" name="title" class="form-control" required></td>
+                        <td>Username</td>
+                        <td><input type="text" name="username" class="form-control" value="<?php echo htmlspecialchars($_SESSION["name"]); ?>" disabled></td>
                     </tr>
 
                     <tr>
-                        <td>News text</td>
-                        <td><textarea rows="5" name="text" class="form-control" required></textarea></td>
+                        <td>Name</td>
+                        <td><input type="text" name="name" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lastname</td>
+                        <td><input type="text" name="lastname" class="form-control" required></td>
                     </tr>
 
                     <tr>
@@ -41,23 +46,12 @@
                             <select name="idCategory" class="form-control">
                                 <?php
                                 foreach ($arr as $row) {
-                                    echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+                                    echo '<option value="' . $row['category_id'] . '">' . $row['category_name_est'] . '</option>';
                                 }
                                 ?>
                             </select>
                         </td>
                     </tr>
-
-                    <!-- Image -->
-                    <tr>
-                        <td>Picture</td>
-                        <td>
-                            <div>
-                                <input type="file" name="picture" style="color:black;" required>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- End image -->
 
                     <tr>
                         <td colspan="2">

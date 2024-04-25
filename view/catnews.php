@@ -1,8 +1,8 @@
 <?php
 ob_start();
 ?>
-<h1>Uudised (kategooriad)</h1>
-<br>
+<!--<h1>Uudised (kategooriad)</h1>-->
+<!--<br>-->
 
 <?php
 ViewNews::newsByCategory($arr);

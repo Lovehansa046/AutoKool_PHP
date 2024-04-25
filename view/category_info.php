@@ -5,8 +5,8 @@ foreach ($arr as $value) {
     echo "<div class='col-md-4 mb-4'>
                 <div class='card category-card'>
                     <div class='card-body'>
-                        <h3 class='card-title'  href='category?id=" . $value['id'] . "'>" . $value['name'] . "</h3>
-                        <h3 class='card-title'>" . $value['name'] . "</h3>
+                        <h3 class='card-title'  href='category?id=" . $value['category_id'] . "'>" . $value['category_name_est'] . "</h3>
+                        <h3 class='card-title'>" . $value['category_price'] . "</h3>
                         <h3 class='card-title'>(sõiduauto)</h3>
                         <p class='card-text'>Intensiivne kursus sõiduauto juhtimiseks, valmistudes teooria- ja praktilisele
                             eksamile.</p>

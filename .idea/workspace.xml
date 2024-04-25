@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="изменение формы регистрации, формы логирование и личного кабинета">
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="изменение формы авторизации">
+      <change afterPath="$PROJECT_DIR$/view/ViewPersonal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/formLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/formLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsAddForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsAddForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/route/routing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Personal.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Personal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ViewNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ViewNews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/category_CarSchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/category_CarSchool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/category_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/category_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/catnews.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/catnews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +95,7 @@
       <workItem from="1713381734604" duration="10714000" />
       <workItem from="1713468641803" duration="5007000" />
       <workItem from="1713765978257" duration="2405000" />
-      <workItem from="1714027851809" duration="1577000" />
+      <workItem from="1714027851809" duration="8418000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -140,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713731615616</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="изменение формы авторизации">
+      <option name="closed" value="true" />
+      <created>1714029538448</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714029538448</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +186,7 @@
     <MESSAGE value="AKPHP-17 - создание главной страницы и всех адаптивов" />
     <MESSAGE value="AKPHP-17 - создание главной страницы используя php" />
     <MESSAGE value="изменение формы регистрации, формы логирование и личного кабинета" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменение формы регистрации, формы логирование и личного кабинета" />
+    <MESSAGE value="изменение формы авторизации" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменение формы авторизации" />
   </component>
 </project>

@@ -7,7 +7,7 @@ class Register
         $controll = array(0 => false, 1 => 'error');
         if (isset($_POST['save'])) {
             $errorString = "";
-            $name = $_POST['name'];
+            $Username = $_POST['username'];
             $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
             if (!$email) {
                 $errorString .= "Неправильный email<br />";
@@ -25,7 +25,7 @@ class Register
                 $date = Date("Y-m-d");
 
                 $sql = "INSERT INTO `users` (`id`, `username`, `email`, `password`,
-                `status`, `registration_date`, `pass`) VALUES (NULL, '$name', '$email', '$passwordHash',
+                `status`, `registration_date`, `pass`) VALUES (NULL, '$Username', '$email', '$passwordHash',
                 'user', '$date', '$password')";
                 $db = new Database();
                 $item = $db->executeRun($sql);

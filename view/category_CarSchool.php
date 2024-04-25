@@ -5,7 +5,7 @@
 foreach ($arr as $value) {
 //    var_dump($value);
     echo "
-    <a class='dropdown-item' href='category?id=" . $value['id'] . "'>" . $value['name'] . "</a>
+    <a class='dropdown-item' href='category?id=" . $value['category_id'] . "'>" . $value['category_name_est'] . "</a>
    ";
 
 //    echo "<div>

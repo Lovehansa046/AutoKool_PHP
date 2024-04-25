@@ -4,9 +4,9 @@ class ModelAdminNews
 {
     public static function getNewsList()
     {
-        $query = "SELECT news.*, category.name, users.username from news,
-        category, users WHERE news.category_id=category.id AND
-        news.user_id=users.id ORDER BY `news`.`id` DESC";
+        $query = "SELECT application.*, category.category_name_est, users.username from application,
+        category, users WHERE application.category_id=category.category_id AND
+        application.user_id=users.id ORDER BY `application`.`id` DESC";
         $db = new Database();
         $arr = $db->getAll($query);
         return $arr;
@@ -41,20 +41,21 @@ class ModelAdminNews
     public static function getNewsAdd()
     {
         if (isset($_POST['save'])) {
-            if (isset($_POST['title'], $_POST['text'], $_POST['idCategory'], $_FILES['picture']['tmp_name'])) {
-                $title = $_POST['title'];
-                $text = $_POST['text'];
+            if (isset($_POST['name'], $_POST['LastName'], $_POST['idCategory'])) {
+                $Username = $_POST['username'];
+                $Name = $_POST['name'];
+                $LastName = $_POST['lastname'];
                 $idCategory = $_POST['idCategory'];
                 $user_id = $_SESSION['userId']; // Здесь подставьте реальный идентификатор пользователя (может быть из сессии)
 
                 // Подготовка изображения для вставки в базу данных
-                $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+//                $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
 
                 // Инициализируем объект базы данных
                 $db = new Database();
 
                 // Проверяем, существует ли уже запись для данного пользователя и категории
-                $check_sql = "SELECT COUNT(*) AS count FROM `news` WHERE `user_id` = :user_id AND `category_id` = :category_id";
+                $check_sql = "SELECT COUNT(*) AS count FROM `application` WHERE `user_id` = :user_id AND `category_id` = :category_id";
                 $params = [':user_id' => $user_id, ':category_id' => $idCategory];
                 $stmt = $db->executePreparedStatement($check_sql, $params);
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -65,12 +66,12 @@ class ModelAdminNews
                     return false; // Возвращаем false, так как новость не может быть добавлена
                 } else {
                     // Если записи нет, можно добавить новую новость
-                    $insert_sql = "INSERT INTO `news` (`title`, `text`, `picture`, `category_id`, `user_id`) 
-                               VALUES (:title, :text, :image, :category_id, :user_id)";
+                    $insert_sql = "INSERT INTO `application` (`username`,`Name`, `LastName`, `category_id`, `user_id`) 
+                               VALUES (:Username,:Name, :LastName, :category_id, :user_id)";
                     $params = [
-                        ':title' => $title,
-                        ':text' => $text,
-                        ':image' => $image,
+                        ':username' => $Username,
+                        ':name' => $Name,
+                        ':lastname' => $LastName,
                         ':category_id' => $idCategory,
                         ':user_id' => $user_id
                     ];

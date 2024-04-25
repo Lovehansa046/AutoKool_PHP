@@ -116,6 +116,7 @@ h2, h3 {
     .head-text {
         font-size: 48px;
     }
+
     /* Стили для мобильных устройств */
     header {
         padding: 80px 0; /* Уменьшенные внутренние отступы */
@@ -136,6 +137,7 @@ h2, h3 {
     .head-text {
         font-size: 48px;
     }
+
     /* Дополнительные стили для узких мобильных устройств */
     header {
         padding: 60px 0; /* Дополнительно уменьшенные внутренние отступы */
@@ -145,3 +147,14 @@ h2, h3 {
         margin-bottom: 20px; /* Уменьшенный отступ между карточками */
     }
 }
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+

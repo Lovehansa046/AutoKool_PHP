@@ -39,6 +39,11 @@ class Controller
         include_once 'view/catnews.php';
     }
 
+    public static function personal()
+    {
+        include_once 'view/Personal.php';
+    }
+
     public static function newsByID($id)
     {
         $n = News::getNewsByID($id);
