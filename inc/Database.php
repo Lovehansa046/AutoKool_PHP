@@ -64,4 +64,11 @@ class Database
         $response = $this->conn->exec($query);
         return $response;
     }
+
+    function executePreparedStatement($query, $params)
+    {
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute($params);
+        return $stmt;
+    }
 }
