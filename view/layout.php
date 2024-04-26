@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="style_main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <style>
+
         footer {
             background-color: #007bff;
             color: #fff;
             text-align: center;
             padding: 10px 0;
             width: 100%;
-            position: fixed;
-            bottom: 0;
+            margin-top: auto; /* Поднимаем footer вниз до конца видимой области */
         }
     </style>
 </head>

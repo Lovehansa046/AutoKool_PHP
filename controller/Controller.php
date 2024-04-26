@@ -41,6 +41,7 @@ class Controller
 
     public static function personal()
     {
+        $arr = Personal::getAllPersonal();
         include_once 'view/Personal.php';
     }
 
