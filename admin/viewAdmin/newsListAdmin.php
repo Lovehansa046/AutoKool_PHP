@@ -3,9 +3,9 @@
     <h2>Request List</h2>
 
     <div class="container" style="min-height:400px;">
-        <div style="margin:20px;">
-            <a href="newsAdd" class="btn btn-primary" role="button">Добавить запрос</a>
-        </div>
+<!--        <div style="margin:20px;">-->
+<!--            <a href="newsAdd" class="btn btn-primary" role="button">Добавить новость</a>-->
+<!--        </div>-->
         <div class="col-md-11">
             <table class="table table-bordered table-responsive">
                 <tr>

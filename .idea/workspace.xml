@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="Создание страницы с работниками">
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="Добавление заявки пользователем">
+      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsListAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controllerAdmin/ControllerAdminNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllerAdmin/ControllerAdminNews.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/routeAdmin/routingAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/routeAdmin/routingAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsList.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +54,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/AutoKool/view&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/xampp/htdocs/AutoKool/admin/viewAdmin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AutoKool\admin\viewAdmin" />
       <recent name="C:\xampp\htdocs\AutoKool\view" />
     </key>
   </component>
@@ -82,7 +88,7 @@
       <workItem from="1713468641803" duration="5007000" />
       <workItem from="1713765978257" duration="2405000" />
       <workItem from="1714027851809" duration="12461000" />
-      <workItem from="1714399185206" duration="1220000" />
+      <workItem from="1714399185206" duration="4445000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -164,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714111326638</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Добавление заявки пользователем">
+      <option name="closed" value="true" />
+      <created>1714400459844</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714400459844</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +205,7 @@
     <MESSAGE value="изменение формы регистрации, формы логирование и личного кабинета" />
     <MESSAGE value="изменение формы авторизации" />
     <MESSAGE value="Создание страницы с работниками" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание страницы с работниками" />
+    <MESSAGE value="Добавление заявки пользователем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление заявки пользователем" />
   </component>
 </project>

@@ -2,6 +2,12 @@
 class ControllerAdminNews
 {
     // list News
+    public static function newsListAdmin()
+    {
+        $arr = ModelAdminNews::getNewsList();
+        include_once 'viewAdmin/newsListAdmin.php';
+    }
+
     public static function newsList()
     {
         $arr = ModelAdminNews::getNewsList();
@@ -36,16 +42,16 @@ class ControllerAdminNews
     }
 
     // delete
-    public static function newsDeleteForm($id)
+    public static function newsDeleteForm($application_id)
     {
         $arr = ModelAdminCategory::getCategoryList();
-        $detail = ModelAdminNews::getNewsDetail($id);
+        $detail = ModelAdminNews::getNewsDetail($application_id);
         include_once('viewAdmin/newsDeleteForm.php');
     }
 
-    public static function newsDeleteResult($id)
+    public static function newsDeleteResult($application_id)
     {
-        $test = ModelAdminNews::getNewsDelete($id);
+        $test = ModelAdminNews::getNewsDelete($application_id);
         include_once('viewAdmin/newsDeleteForm.php');
     }
 }  // class

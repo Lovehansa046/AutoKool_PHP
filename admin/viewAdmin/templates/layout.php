@@ -95,7 +95,7 @@
                                 <a class="nav-link" href="categoryAdmin">Categories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="newsAdmin">News List</a>
+                                <a class="nav-link" href="newsAdmin">Request</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
@@ -128,7 +128,7 @@
 <!--                                <a class="nav-link" href="categoryAdmin">Categories</a>-->
 <!--                            </li>-->
                             <li class="nav-item">
-                                <a class="nav-link" href="newsAdmin">Request</a>
+                                <a class="nav-link" href="newsUser">Request</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="PersonalAccount">Isiklik ala</a>

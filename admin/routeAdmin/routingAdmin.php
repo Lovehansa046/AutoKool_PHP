@@ -15,6 +15,8 @@ elseif ($path == 'login') {
     $response = ControllerAdmin::logoutAction();
 } // listNews
 elseif ($path == 'newsAdmin') {
+    $response = ControllerAdminNews::newsListAdmin();
+} elseif ($path == 'newsUser') {
     $response = ControllerAdminNews::newsList();
 } elseif ($path == 'PersonalAccount') {
     $response = ControllerAdmin::PersonalAccount();
@@ -29,10 +31,10 @@ elseif ($path == 'newsEdit' && isset($_GET['id'])) {
 } elseif ($path == 'newsEditResult' && isset($_GET['id'])) {
     $response = ControllerAdminNews::newsEditResult($_GET['id']);
 } // delete news
-elseif ($path == 'newsDel' && isset($_GET['id'])) {
-    $response = ControllerAdminNews::newsDeleteForm($_GET['id']);
-} elseif ($path == 'newsDelResult' && isset($_GET['id'])) {
-    $response = ControllerAdminNews::newsDeleteResult($_GET['id']);
+elseif ($path == 'newsDel' && isset($_GET['application_id'])) {
+    $response = ControllerAdminNews::newsDeleteForm($_GET['application_id']);
+} elseif ($path == 'newsDelResult' && isset($_GET['application_id'])) {
+    $response = ControllerAdminNews::newsDeleteResult($_GET['application_id']);
 } // Страница не существует
 else {
     $response = ControllerAdmin::error404();
