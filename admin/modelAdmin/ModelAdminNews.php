@@ -6,7 +6,7 @@ class ModelAdminNews
     {
         $query = "SELECT application.*, category.category_name_est, users.username from application,
         category, users WHERE application.category_id=category.category_id AND
-        application.user_id=users.id ORDER BY `application`.`id` DESC";
+        application.user_id=users.id ORDER BY `application`.`application_id` DESC";
         $db = new Database();
         $arr = $db->getAll($query);
         return $arr;
@@ -41,8 +41,8 @@ class ModelAdminNews
     public static function getNewsAdd()
     {
         if (isset($_POST['save'])) {
-            if (isset($_POST['name'], $_POST['LastName'], $_POST['idCategory'])) {
-                $Username = $_POST['username'];
+            if (isset($_POST['name'], $_POST['lastname'], $_POST['idCategory']) !== null) {
+                $Username = $_SESSION['name'];
                 $Name = $_POST['name'];
                 $LastName = $_POST['lastname'];
                 $idCategory = $_POST['idCategory'];
@@ -66,8 +66,8 @@ class ModelAdminNews
                     return false; // Возвращаем false, так как новость не может быть добавлена
                 } else {
                     // Если записи нет, можно добавить новую новость
-                    $insert_sql = "INSERT INTO `application` (`username`,`Name`, `LastName`, `category_id`, `user_id`) 
-                               VALUES (:Username,:Name, :LastName, :category_id, :user_id)";
+                    $insert_sql = "INSERT INTO `application` (`application_id`,`username`,`name`, `lastname`, `user_id`, `category_id`) 
+                               VALUES (NULL, :username,:name, :lastname, :user_id, :category_id)";
                     $params = [
                         ':username' => $Username,
                         ':name' => $Name,

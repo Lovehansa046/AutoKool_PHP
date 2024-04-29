@@ -18,16 +18,18 @@
                 foreach ($arr as $row) {
                     echo '<tr>';
 
-                    echo '<td>' . $row['id'] . '</td>';
+                    echo '<td>' . $row['application_id'] . '</td>';
 
-                    echo '<td><b>Title: </b>' . $row['title'] . '<br>';
-                    echo '<b>Категория: </b><i>' . $row['name'] . '</i><br>';
-                    echo '<b>Author: </b><i>' . $row['username'] . '</i>';
+                    echo '<td><b>Name: </b>' . $row['name'] . '<br>';
+                    echo '<b>Lastname: </b><i>' . $row['lastname'] . '</i><br>';
+                    echo '<b>Category: </b><i>' . $row['category_id'] . '</i><br>';
+
+
                     echo '</td>';
 
                     echo '<td>
                     
-                    <a href="newsDel?id=' . $row['id'] . '">Delete <span class="glyphicon
+                    <a href="newsDel?id=' . $row['application_id'] . '">Delete <span class="glyphicon
                     glyphicon-remove" aria-hidden="true"></span></a>
                     </td>';
 
