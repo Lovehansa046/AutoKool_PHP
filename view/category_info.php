@@ -1,6 +1,5 @@
 <?php
 
-//echo "<li class='submenuunit'><a href='all'>KÕIK</a></li><br>";
 foreach ($arr as $value) {
     echo "<div class='col-md-4 mb-4'>
                 <div class='card category-card'>
