@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 26 2024 г., 08:02
--- Версия сервера: 10.4.32-MariaDB
--- Версия PHP: 8.2.12
+-- Время создания: Апр 30 2024 г., 11:22
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,13 +31,13 @@ USE `autokool`;
 --
 
 CREATE TABLE `application` (
-  `id` int(11) NOT NULL,
-  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `LastName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `category_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `username` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `application_id` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -51,7 +52,7 @@ CREATE TABLE `category` (
   `category_description_est` text DEFAULT NULL,
   `category_description_rus` text DEFAULT NULL,
   `category_name_rus` varchar(55) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `category`
@@ -75,7 +76,7 @@ CREATE TABLE `staff` (
   `staff_foto` mediumblob DEFAULT NULL,
   `staff_car` mediumblob DEFAULT NULL,
   `staff_category` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `staff`
@@ -98,17 +99,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) DEFAULT NULL,
   `picture` blob DEFAULT NULL,
-  `job` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `telefon` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `login` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `job` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `telefon` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `login` varchar(20) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(20) CHARACTER SET utf8 NOT NULL,
   `registration_date` date NOT NULL,
   `pass` varchar(255) DEFAULT NULL,
   `Name` varchar(100) NOT NULL,
   `LastName` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Дамп данных таблицы `users`
@@ -133,9 +134,9 @@ INSERT INTO `users` (`id`, `username`, `picture`, `job`, `email`, `telefon`, `lo
 -- Индексы таблицы `application`
 --
 ALTER TABLE `application`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `category_id` (`category_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`application_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `category_id` (`category_id`);
 
 --
 -- Индексы таблицы `category`
@@ -164,7 +165,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `application`
 --
 ALTER TABLE `application`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
@@ -192,8 +193,8 @@ ALTER TABLE `users`
 -- Ограничения внешнего ключа таблицы `application`
 --
 ALTER TABLE `application`
-  ADD CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`),
-  ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `application_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `application_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`);
 
 --
 -- Ограничения внешнего ключа таблицы `staff`
