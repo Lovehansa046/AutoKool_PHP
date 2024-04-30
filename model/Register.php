@@ -7,7 +7,7 @@ class Register
         $controll = array(0 => false, 1 => 'error');
         if (isset($_POST['save'])) {
             $errorString = "";
-            $Username = $_POST['username'];
+            $Username = $_POST['name'];
             $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
             if (!$email) {
                 $errorString .= "Неправильный email<br />";
