@@ -2,7 +2,7 @@
 
 class ViewPersonal
 {
-    public static function viewPersonal($arr)
+    public static function viewPersonals($arr)
     {
         foreach ($arr as $value) {
             echo " <div class='profile-card'>
