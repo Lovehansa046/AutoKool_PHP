@@ -28,7 +28,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./">AutoKool</a>
+        <a id="AutoKool" class="navbar-brand" href="./">AutoKool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,10 +36,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="personal">Personal <span class="sr-only">(current)</span></a>
+                    <a id="Personal" class="nav-link" href="personal">Personal <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <a id="Kategooriad" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                         Kategooriad
                     </a>
 
@@ -50,10 +50,10 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registerForm">Registreeru</a>
+                    <a id="Reg" class="nav-link" href="registerForm">Registreeru</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/index.php" style="display:block; text-align:center;">Isiklik ala</a>
+                    <a id="ISIK" class="nav-link" href="admin/index.php" style="display:block; text-align:center;">Isiklik ala</a>
                 </li>
 
             </ul>
@@ -64,7 +64,7 @@
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Otsi" aria-label="Otsi">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Otsi</button>
+                <button id="Otsi" class="btn btn-outline-success my-2 my-sm-0" type="submit">Otsi</button>
             </form>
         </div>
     </nav>
@@ -89,7 +89,7 @@
     <!--Content-->
 
     <footer class="bg-primary text-white text-center py-4">
-        <p>&copy; 2024 Autokool "Edu tee". Kõik õigused kaitstud.</p>
+        <p id="footer">&copy; 2024 Autokool "Edu tee". Kõik õigused kaitstud.</p>
     </footer>
     <!-- JavaScript скрипт -->
     <script>
@@ -122,7 +122,61 @@
             document.documentElement.lang = 'ru'; // Устанавливаем атрибут lang для HTML-элемента
         }
     }
+
+    function updatePageText(lang) {
+        if (lang === 'est') {
+            document.getElementById('footer').textContent = ' 2024 Autokool "Edu tee". Kõik õigused kaitstud.'
+            document.getElementById('AutoKool').textContent = 'AutoKool'
+            document.getElementById('Personal').textContent = 'Personal'
+            document.getElementById('ISIK').textContent = 'Isiklik ala'
+            document.getElementById('Reg').textContent = 'Registreeru'
+            document.getElementById('Otsi').textContent = 'Otsi'
+            document.getElementById('langEst').textContent = 'Est'
+            document.getElementById('langRu').textContent = 'Rus'
+            document.getElementById('Kategooriad').textContent = 'Kategooriad'
+
+        } else if (lang === 'ru') {
+            document.getElementById('footer').textContent = ' 2024 Автошкола «Edu tee». Все права защищены.'
+            document.getElementById('AutoKool').textContent = 'Автошкола'
+            document.getElementById('Personal').textContent = 'Персонал'
+            document.getElementById('ISIK').textContent = 'Личный кабинет'
+            document.getElementById('Reg').textContent = 'Регистрация'
+            document.getElementById('Otsi').textContent = 'Искать'
+            document.getElementById('langRu').textContent = 'Рус'
+            document.getElementById('langEst').textContent = 'Эст'
+            document.getElementById('Kategooriad').textContent = 'Категории'
+
+        }
+
+        // Сохраняем выбранный язык в localStorage
+        localStorage.setItem('lang', lang);
+
+        // Сохраняем выбранный язык также в Cookie
+        document.cookie = `lang=${lang}; expires=Sun, 1 Jan 2025 00:00:00 UTC; path=/`;
+    }
+
+    // Функция для установки активного языка при загрузке страницы
+    function setInitialLanguage() {
+        var savedLang = localStorage.getItem('lang') || 'est'; // По умолчанию 'est', если язык не установлен
+
+        // Обновляем текст на странице в соответствии с сохраненным языком
+        updatePageText(savedLang);
+    }
+
+    // Вызываем функцию установки языка при загрузке страницы
+    setInitialLanguage();
+
+    // Обработчики событий для изменения языка
+    document.getElementById('langEst').addEventListener('click', function() {
+        updatePageText('est');
+    });
+
+    document.getElementById('langRu').addEventListener('click', function() {
+        updatePageText('ru');
+    });
 </script>
+
+
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
 
