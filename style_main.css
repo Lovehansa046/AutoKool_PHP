@@ -11,7 +11,7 @@
 }
 
 .category-card {
-    height: 300px;
+    height: 200px;
 }
 
 .text {
@@ -27,13 +27,14 @@
     margin-top: 50px;
 }
 
-/*.contact-info {*/
-/*    height: 100px;*/
-/*    !*display: block;*!*/
-/*    !*text-align: justify;*!*/
-/*    !*padding-right: 100px;*!*/
-/*    !*margin-right: 300px;*!*/
-/*}*/
+.contact-info {
+    height: 50px;
+    width: 200px;
+    /*display: block;*/
+    /*text-align: justify;*/
+    /*padding-right: 100px;*/
+    /*margin-right: 300px;*/
+}
 
 section {
     display: flex;
@@ -69,42 +70,42 @@ h2, h3 {
     text-align: center;
 }
 
-/*!* Стили для навигационного меню *!*/
-/*.navbar {*/
-/*    background-color: #ffffff; !* Цвет фона навигационного меню *!*/
-/*    border-bottom: 1px solid #ddd; !* Граница снизу *!*/
-/*}*/
+/* Стили для навигационного меню */
+.navbar {
+    background-color: #ffffff; /* Цвет фона навигационного меню */
+    border-bottom: 1px solid #ddd; /* Граница снизу */
+}
 
-/*!* Стили для заголовка шапки *!*/
-/*header {*/
-/*    background-color: #007bff; !* Цвет фона *!*/
-/*    color: #ffffff; !* Цвет текста *!*/
-/*    padding: 100px 0; !* Внутренние отступы *!*/
-/*    text-align: center;*/
-/*}*/
+/* Стили для заголовка шапки */
+header {
+    background-color: #007bff; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    padding: 100px 0; /* Внутренние отступы */
+    text-align: center;
+}
 
-/*!* Стили для основного контента *!*/
-/*main {*/
-/*    padding: 30px 15px; !* Внутренние отступы *!*/
-/*}*/
+/* Стили для основного контента */
+main {
+    padding: 30px 15px; /* Внутренние отступы */
+}
 
 /*!* Стили для карточек курсов *!*/
-/*.category-card {*/
-/*    height: 100%; !* Высота карточек *!*/
-/*    border: 1px solid #ddd; !* Граница *!*/
-/*    border-radius: 8px; !* Радиус скругления углов *!*/
-/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); !* Тень *!*/
-/*    transition: box-shadow 0.3s ease-in-out; !* Плавный переход для тени *!*/
-/*}*/
+.category-card {
+    height: 100%; /* Высота карточек */
+    border: 1px solid #ddd; /* Граница */
+    border-radius: 8px; /* Радиус скругления углов */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: box-shadow 0.3s ease-in-out; /* Плавный переход для тени */
+}
 
-/*.category-card:hover {*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); !* Тень при наведении *!*/
-/*}*/
+.category-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
 
-/*!* Стили для контактной информации *!*/
-/*.contact-info {*/
-/*    margin-top: 50px; !* Отступ сверху *!*/
-/*}*/
+/* Стили для контактной информации */
+.contact-info {
+    margin-top: 50px; /* Отступ сверху */
+}
 
 /* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
@@ -132,6 +133,10 @@ h2, h3 {
 
     .container-about {
         display: inline-block;
+        justify-content: center;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .head-text {
@@ -144,8 +149,28 @@ h2, h3 {
     }
 
     .category-card {
+        /*padding: 30px;*/
+        /*max-width: 100%;*/
         margin-bottom: 20px; /* Уменьшенный отступ между карточками */
     }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .navbar {
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .mb-5 {
+        padding: 40px;
+        max-width: 400px;
+        margin-left: 20px;
+    }
+
+
 }
 
 

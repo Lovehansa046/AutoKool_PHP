@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="Добавление заявки пользователем">
-      <change afterPath="$PROJECT_DIR$/admin/viewAdmin/newsListAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllerAdmin/ControllerAdminNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllerAdmin/ControllerAdminNews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modelAdmin/ModelAdminNews.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/routeAdmin/routingAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/routeAdmin/routingAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsList.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +26,12 @@
     &quot;assignee&quot;: &quot;Lovehansa046&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="d7173be1-70ba-40c1-8fca-390ecfdb989c" />
-        <option name="url" value="https://github.com/Lovehansa046/AutoKool_PHP.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lovehansa046/AutoKool_PHP.git&quot;,
+    &quot;accountId&quot;: &quot;3a3af4e3-ea08-494c-9d99-b95e9c53aae4&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,11 +52,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/xampp/htdocs/AutoKool/admin/viewAdmin",
+    "last_opened_file_path": "/Applications/XAMPP/xamppfiles/htdocs/AutoKool_PHP_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,6 +67,14 @@
       <recent name="C:\xampp\htdocs\AutoKool\admin\viewAdmin" />
       <recent name="C:\xampp\htdocs\AutoKool\view" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,6 +90,8 @@
       <workItem from="1713765978257" duration="2405000" />
       <workItem from="1714027851809" duration="12461000" />
       <workItem from="1714399185206" duration="4445000" />
+      <workItem from="1715012253146" duration="165000" />
+      <workItem from="1715031301603" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
