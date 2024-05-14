@@ -1,5 +1,7 @@
 <?php
 
+
+
 class Database
 {
     private $conn;
@@ -57,6 +59,18 @@ class Database
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $response = $stmt->fetchAll();
         return $response;
+    }
+
+
+    public function executeRun__2($sql, $params = [])
+    {
+        $stmt = $this->conn->prepare($sql);
+
+        if ($stmt->execute($params)) {
+            return $stmt;
+        } else {
+            throw new Exception('Ошибка выполнения запроса');
+        }
     }
 
     function executeRun($query)

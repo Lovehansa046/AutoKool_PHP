@@ -16,7 +16,7 @@ class ControllerAdmin
         if (isset($logIn) and $logIn == true) {
             include_once('viewAdmin/PersonalAccount.php');
         } else {
-            $_SESSION['errorString'] = 'Неправильное имя пользователя или пароль';
+            $_SESSION['errorString'] = 'Vale kasutajanimi või parool';
             include_once('viewAdmin/formLogin.php');
         }
     }

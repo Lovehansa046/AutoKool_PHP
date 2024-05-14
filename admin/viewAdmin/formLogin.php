@@ -4,13 +4,13 @@ if (isset($_SESSION['userId'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="et">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin dashboard</title>
+    <title>Admini juhtpaneel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
@@ -66,14 +66,14 @@ if (isset($_SESSION['userId'])) {
 <body>
 <div class="card">
     <form class="form-signin" action="login" method="POST">
-        <h3 style="text-align:center; padding: 20px" class="form-signin-heading">Авторизация</h3>
+        <h3 style="text-align:center; padding: 20px" class="form-signin-heading">Autentimine</h3>
         <p>Email</p>
         <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
-        <!--required-->
+        <!--nõutav-->
         <p>Parool</p>
-        <input type="password" name="password" class="form-control" placeholder="Пароль">
-        <!--required-->
-        <button style="margin-top: 40px;" class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin">Войти</button>
+        <input type="password" name="password" class="form-control" placeholder="Parool">
+        <!--nõutav-->
+        <button style="margin-top: 40px;" class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin">Logi sisse</button>
 
         <p style="padding-top:10px;">
             <?php
@@ -83,11 +83,10 @@ if (isset($_SESSION['userId'])) {
             }
             ?>
         </p>
-        <p style="text-align: center; padding-top:10px;"><a href="../">Home page</a></p>
+        <p style="text-align: center; padding-top:10px;"><a href="../">Avaleht</a></p>
     </form>
 </div> <!-- /container -->
 
 </body>
 
 </html>
-

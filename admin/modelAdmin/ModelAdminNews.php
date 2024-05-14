@@ -181,6 +181,63 @@ class ModelAdminNews
 //    }
 
 
+//    public static function getNewsDelete($application_id)
+//    {
+//        $test = false;
+//
+//        if (isset($_POST['save'])) {
+//            $db = new Database();
+//
+//            try {
+//                // Подготовленный запрос на удаление новости
+//                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
+//                $params = [':application_id' => $application_id];
+//
+//                $stmt = $db->executeRun($sql, $params); // Выполнение подготовленного запроса
+//
+//
+////                 Проверка успешности выполнения запроса
+//                if ($stmt->rowCount() > 0) {
+//                    $test = true;
+//                }
+//            } catch (PDOException $e) {
+//                // Обработка ошибки выполнения запроса
+//                echo "Ошибка выполнения запроса: " . $e->getMessage();
+//            }
+//        }
+//
+//        return $test;
+//    }
+
+//    public static function getNewsDelete($application_id)
+//    {
+//        $test = false;
+//
+//        if (isset($_POST['save'])) {
+//            $db = new Database();
+//
+//            try {
+//                // Подготовить SQL запрос с использованием именованного параметра
+//                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
+//
+//                // Подставить параметры в массиве для выполнения запроса
+//                $params = [':application_id' => $application_id];
+//
+//                // Выполнить подготовленный запрос с параметрами
+//                $stmt = $db->executeRun($sql, $params);
+//
+//                // Проверить, были ли затронуты какие-либо строки
+//                if ($stmt->rowCount() > 0) {
+//                    $test = true;
+//                }
+//            } catch (PDOException $e) {
+//                // Обработать исключение PDO
+//                echo "Ошибка выполнения запроса: " . $e->getMessage();
+//            }
+//        }
+//
+//        return $test;
+//    }
     public static function getNewsDelete($application_id)
     {
         $test = false;
@@ -189,24 +246,27 @@ class ModelAdminNews
             $db = new Database();
 
             try {
-                // Подготовленный запрос на удаление новости
                 $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
                 $params = [':application_id' => $application_id];
 
-                $stmt = $db->executeRun($sql, $params); // Выполнение подготовленного запроса
+                $stmt = $db->executeRun__2($sql, $params);
 
-
-//                 Проверка успешности выполнения запроса
-                if ($stmt->rowCount() > 0) {
+                // Kontrolli, kas mõjutati mingeid ridu
+                if ($stmt instanceof PDOStatement && $stmt->rowCount() > 0) {
                     $test = true;
                 }
             } catch (PDOException $e) {
-                // Обработка ошибки выполнения запроса
-                echo "Ошибка выполнения запроса: " . $e->getMessage();
+                echo "Päringu täitmisel ilmnes viga: " . $e->getMessage();
+            } catch (Exception $e) {
+                echo "Viga: " . $e->getMessage();
             }
         }
 
         return $test;
     }
+
+
+
+
 
 }  // class
