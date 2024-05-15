@@ -29,7 +29,7 @@ Before setting up the application, ensure you have the following installed:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/autokool.git
+   git clone https://github.com/Lovehansa046/autokool.git
    ```
 
 2. **Database Setup**:
