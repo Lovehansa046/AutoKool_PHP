@@ -1,23 +1,12 @@
 <?php
 
 
-function getCookieValue($name)
-{
-    return isset($_COOKIE[$name]) ? $_COOKIE[$name] : null;
-}
-
-// Извлекаем значение языка из Cookie
-$lang_active = getCookieValue('lang');
-
-
-// Если язык не найден в Cookie или не установлен, используем язык по умолчанию 'est'
-if (!$lang_active) {
-    $lang_active = 'est';
-}
 
 class ViewPersonal
 {
+
     public static function viewPersonals($arr)
+
     {
         foreach ($arr as $value) {
             echo '<div class="profile-card">';
@@ -27,7 +16,8 @@ class ViewPersonal
 
             // Фото лицензии
             echo '<div class="license-photo">';
-            echo '<p id="foto__staff__license" class="photo-label">Фото лицензии:</p>';
+
+            echo '<p id="foto__staff__license" class="photo-label">' . ($lang_active === "ru" ? 'Преимущества обучения у нас' : 'Õppimise eelised meie juures') . 'Фото лицензии:</p>';
             echo '<img src="data:image/jpeg;base64,' . base64_encode($value['staff_license']) . '" width="150" /><br>';
             echo '</div>';
 

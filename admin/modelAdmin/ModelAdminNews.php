@@ -108,48 +108,48 @@ class ModelAdminNews
 
 
     //Метод удаление заявки, без применения систем PDO
-    public static function getNewsDelete($application_id)
-    {
-        $test = false;
-        if (isset($_POST['save'])) {
-            $sql = "DELETE FROM `application` WHERE `application`.`application_id` = " . $application_id;
-            $db = new Database();
-            $item = $db->executeRun($sql);
-            if ($item == true) {
-                $test = true;
-            }
-        }
-        return $test;
-    }
-
-
-    //Метод удаление заявки, посредством костыля и создание дополнительной функции executeRun__2, так как функция ранее, не хотела принимать переменную $params
 //    public static function getNewsDelete($application_id)
 //    {
 //        $test = false;
-//
 //        if (isset($_POST['save'])) {
+//            $sql = "DELETE FROM `application` WHERE `application_id`.`application_id` = " . $application_id;
 //            $db = new Database();
-//
-//            try {
-//                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
-//                $params = [':application_id' => $application_id];
-//
-//                $stmt = $db->executeRun__2($sql, $params);
-//
-//                // Kontrolli, kas mõjutati mingeid ridu
-//                if ($stmt instanceof PDOStatement && $stmt->rowCount() > 0) {
-//                    $test = true;
-//                }
-//            } catch (PDOException $e) {
-//                echo "Päringu täitmisel ilmnes viga: " . $e->getMessage();
-//            } catch (Exception $e) {
-//                echo "Viga: " . $e->getMessage();
+//            $item = $db->executeRun($sql);
+//            if ($item == true) {
+//                $test = true;
 //            }
 //        }
-//
 //        return $test;
 //    }
+
+
+    //Метод удаление заявки, посредством костыля и создание дополнительной функции executeRun__2, так как функция ранее, не хотела принимать переменную $params
+    public static function getNewsDelete($application_id)
+    {
+        $test = false;
+
+        if (isset($_POST['save'])) {
+            $db = new Database();
+
+            try {
+                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
+                $params = [':application_id' => $application_id];
+
+                $stmt = $db->executePreparedStatement($sql, $params);
+
+                // Kontrolli, kas mõjutati mingeid ridu
+                if ($stmt instanceof PDOStatement && $stmt->rowCount() > 0) {
+                    $test = true;
+                }
+            } catch (PDOException $e) {
+                echo "Päringu täitmisel ilmnes viga: " . $e->getMessage();
+            } catch (Exception $e) {
+                echo "Viga: " . $e->getMessage();
+            }
+        }
+
+        return $test;
+    }
 
 
 

@@ -44,8 +44,8 @@ echo "<main class='container py-5'>
     </section>
 
     <section id='contact' class='mb-5'>
-        <div class='container container-primary'>
-            <h2 class='text-primary mb-4 contact-info'>" . ($lang_active === 'ru' ? 'Контактная информация' : 'Kontaktandmed') . "</h2>
+        <div class='container container-primary '  style='align-content: center'>
+            <h2 class='text-primary mb-4 contact-info container-info' style='width: 100%;'>" . ($lang_active === 'ru' ? 'Контактная информация' : 'Kontaktandmed') . "</h2>
             <ul class='list-group'>
                 <li class='list-group-item'>" . ($lang_active === 'ru' ? 'Адрес: Центральная улица 123, Таллинн' : 'Aadress: Kesk tn 123, Tallinn') . "</li>
                 <li class='list-group-item'>" . ($lang_active === 'ru' ? 'Телефон: +372 123 456-78-90' : 'Telefon: +372 123 456-78-90') . "</li>
