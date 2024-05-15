@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="изменение языка" />
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="изменение языка">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsDeleteForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/newsListAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/newsListAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/startAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/startAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/viewAdmin/templates/layout.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715769775382</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="изменение языка">
+      <option name="closed" value="true" />
+      <created>1715770012220</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715770012220</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +254,7 @@
     <MESSAGE value="изменение формы авторизации" />
     <MESSAGE value="Создание страницы с работниками" />
     <MESSAGE value="Добавление заявки пользователем" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/keel'&#10;&#10;# Conflicts:&#10;#&#9;view/ViewNews.php" />
     <MESSAGE value="изменение языка" />
     <option name="LAST_COMMIT_MESSAGE" value="изменение языка" />
   </component>

@@ -2,9 +2,10 @@
 
 $lang_active = getCookieValue('lang');
 ?>
-
-<h2>Päringute nimekiri</h2>
-
+<?php
+echo '
+<h2>' . ($lang_active === "ru" ? "Список запросов" : " Päringute nimekiri") . '</h2>
+' ?>
 <div class="container" style="min-height:400px;">
     <!--        <div style="margin:20px;">-->
     <!--            <a href="newsAdd" class="btn btn-primary" role="button">Lisa uudis</a>-->
@@ -13,9 +14,14 @@ $lang_active = getCookieValue('lang');
         <table class="table table-bordered table-responsive">
             <tr>
                 <th width="10%">ID</th>
-                <th width="70%">Pealkiri</th>
+                <?php
+
+                echo '
+                <th width="70%">' . ($lang_active === "ru" ? "Заголовок" : " Pealkiri") . ' </th>
                 <th width="20%"></th>
+                ' ?>
             </tr>
+
             <?php
 
             $categories = array(

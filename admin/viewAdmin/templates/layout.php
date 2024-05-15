@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </nav>
-            ' ?>s
+            ' ?>
 
         <?php elseif (isset($_SESSION["status"]) && $_SESSION["status"] == "user") : ?>
 
