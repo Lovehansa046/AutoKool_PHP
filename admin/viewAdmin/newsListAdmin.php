@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php ob_start();
+
+$lang_active = getCookieValue('lang');
+?>
 
 <h2>Päringute nimekiri</h2>
 
@@ -21,22 +24,24 @@
                 array('category_id' => 3, 'category_name_est' => 'C'),
             );
 
+
             foreach ($arr as $row) {
                 echo '<tr>';
 
                 echo '<td>' . $row['application_id'] . '</td>';
 
-                echo '<td><b>Nimi: </b>' . $row['name'] . '<br>';
-                echo '<b>Perenimi: </b><i>' . $row['lastname'] . '</i><br>';
-                echo '<b>Kategooria: </b><i>' . getCategoryName($row['category_id'], $categories) . '</i><br>';
+                echo '<td><b>' . ($lang_active === "ru" ? "Имя:" : " Nimi:") . ' </b>' . $row['name'] . '<br>';
+                echo '<b>' . ($lang_active === "ru" ? "Фамилия:" : " Perenimi:") . ' </b><i>' . $row['lastname'] . '</i><br>';
+                echo '<b>' . ($lang_active === "ru" ? "Категория:" : " Kategooria:") . ' </b><i>' . getCategoryName($row['category_id'], $categories) . '</i><br>';
+
 
                 echo '</td>';
 
                 echo '<td>
-        
-        <a href="newsDel?application_id=' . $row['application_id'] . '">Kustuta <span class="glyphicon
-        glyphicon-remove" aria-hidden="true"></span></a>
-        </td>';
+                    
+                    <a href="newsDel?application_id=' . $row['application_id'] . '">' . ($lang_active === "ru" ? "Удалить" : " Kustuta") . ' <span class="glyphicon
+                    glyphicon-remove" aria-hidden="true"></span></a>
+                    </td>';
 
                 echo '</tr>';
             }
@@ -50,7 +55,6 @@
                 }
                 return 'Tundmatu';
             }
-
 
             ?>
         </table>

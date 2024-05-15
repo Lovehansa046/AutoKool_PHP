@@ -64,29 +64,41 @@ if (isset($_SESSION['userId'])) {
 </head>
 
 <body>
-<div class="card">
-    <form class="form-signin" action="login" method="POST">
-        <h3 style="text-align:center; padding: 20px" class="form-signin-heading">Autentimine</h3>
-        <p>Email</p>
-        <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
-        <!--nõutav-->
-        <p>Parool</p>
-        <input type="password" name="password" class="form-control" placeholder="Parool">
-        <!--nõutav-->
-        <button style="margin-top: 40px;" class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin">Logi sisse</button>
 
-        <p style="padding-top:10px;">
-            <?php
-            if (isset($_SESSION['errorString'])) {
-                echo $_SESSION['errorString'];
-                unset($_SESSION['errorString']);
-            }
-            ?>
-        </p>
-        <p style="text-align: center; padding-top:10px;"><a href="../">Avaleht</a></p>
-    </form>
+
+<?php
+
+$lang_active = getCookieValue('lang');
+
+
+echo "
+<div class='card'>
+    <form class='form-signin' action='login' method='POST'>
+        <h3 style='text-align:center; padding: 20px' class='form-signin-heading'>" . ($lang_active === 'ru' ? 'Авторизация' : 'Autentimine') . "</h3>
+        <p>" . ($lang_active === 'ru' ? 'Эмайл' : 'Email') . "</p>
+        <input type='text' name='email' class='form-control' placeholder='Email' autofocus>
+        <!--nõutav-->
+        <p>" . ($lang_active === 'ru' ? 'Пароль' : 'Parool') . "</p>
+        <input type='password' name='password' class='form-control' placeholder='Parool'>
+        <!--nõutav-->
+        <button style='margin-top: 40px;' class='btn btn-lg btn-primary btn-block' type='submit' name='btnLogin'>" . ($lang_active === 'ru' ? 'Войти' : 'Logi sisse') . "</button>
+" ?>
+<p style="padding-top:10px;">
+    <?php
+    if (isset($_SESSION['errorString'])) {
+        echo $_SESSION['errorString'];
+        unset($_SESSION['errorString']);
+    }
+    ?>
+</p>
+
+<?php
+echo "
+<p style='text-align: center; padding-top:10px;'><a href='../'>" . ($lang_active === 'ru' ? 'Главная страница' : 'Avaleht') . "</a></p>
+</form>
 </div> <!-- /container -->
-
+"
+?>
 </body>
 
 </html>

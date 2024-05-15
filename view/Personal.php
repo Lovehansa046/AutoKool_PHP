@@ -1,5 +1,19 @@
 <?php
 ob_start();
+
+function getCookieValue($name)
+{
+    return isset($_COOKIE[$name]) ? $_COOKIE[$name] : null;
+}
+
+// Извлекаем значение языка из Cookie
+$lang_active = getCookieValue('lang');
+
+
+// Если язык не найден в Cookie или не установлен, используем язык по умолчанию 'est'
+if (!$lang_active) {
+    $lang_active = 'est';
+}
 ?>
     <style>
         body {
@@ -64,11 +78,78 @@ ob_start();
             margin-bottom: 50px;
         }
     </style>
-    <div class="container"> Meie Autojuht!</div>
+    <div class="container" id="AutoJuht"></div>
 
+<script>
+    function changeLanguage(lang) {
+        // Сохраняем выбранный язык в localStorage
+        localStorage.setItem('lang', lang);
+        // Перезагружаем страницу, чтобы применить выбранный язык
+        location.reload();
+    }
+
+    // Обработчики событий для кнопок смены языка
+    document.getElementById('langEst').addEventListener('click', function() {
+        changeLanguage('est');
+    });
+
+    document.getElementById('langRu').addEventListener('click', function() {
+        changeLanguage('ru');
+    });
+
+    // Проверяем, сохранен ли язык в localStorage
+    var savedLang = localStorage.getItem('lang');
+
+    // Если язык сохранен, применяем его
+    if (savedLang) {
+        // Установка соответствующего языка на странице
+        if (savedLang === 'est') {
+            document.documentElement.lang = 'et'; // Устанавливаем атрибут lang для HTML-элемента
+        } else if (savedLang === 'ru') {
+            document.documentElement.lang = 'ru'; // Устанавливаем атрибут lang для HTML-элемента
+        }
+    }
+
+    function updatePageText(lang) {
+        if (lang === 'est') {
+            document.getElementById('AutoJuht').textContent = 'Meie Autojuht!'
+
+        } else if (lang === 'ru') {
+            document.getElementById('AutoJuht').textContent = 'Наши Инструктора!'
+
+
+        }
+
+        // Сохраняем выбранный язык в localStorage
+        localStorage.setItem('lang', lang);
+
+        // Сохраняем выбранный язык также в Cookie
+        document.cookie = `lang=${lang}; expires=Sun, 1 Jan 2025 00:00:00 UTC; path=/`;
+    }
+
+    // Функция для установки активного языка при загрузке страницы
+    function setInitialLanguage() {
+        var savedLang = localStorage.getItem('lang') || 'est'; // По умолчанию 'est', если язык не установлен
+
+        // Обновляем текст на странице в соответствии с сохраненным языком
+        updatePageText(savedLang);
+    }
+
+    // Вызываем функцию установки языка при загрузке страницы
+    setInitialLanguage();
+
+    // Обработчики событий для изменения языка
+    document.getElementById('langEst').addEventListener('click', function() {
+        updatePageText('est');
+    });
+
+    document.getElementById('langRu').addEventListener('click', function() {
+        updatePageText('ru');
+    });
+</script>
 
 <?php
-Viewpersonal::viewPersonals($arr);
+Viewpersonal::viewPersonals($arr, $lang_active);
 $content = ob_get_clean();
 include_once 'view/layout.php';
 

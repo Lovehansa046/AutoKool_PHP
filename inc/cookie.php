@@ -1,5 +1,4 @@
 <?php
-ob_start();
 
 function getCookieValue($name)
 {
@@ -14,15 +13,3 @@ $lang_active = getCookieValue('lang');
 if (!$lang_active) {
     $lang_active = 'est';
 }
-
-?>
-<!--<h1>Uudised (kategooriad)</h1>-->
-<!--<br>-->
-
-<?php
-ViewNews::newsByCategory($arr, $lang_active);
-$content = ob_get_clean();
-include_once 'view/layout.php';
-
-
-?>

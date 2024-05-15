@@ -27,33 +27,54 @@
     </style>
 </head>
 <body>
-<div class="form-container">
-    <h2 class="text-center mb-4">Registreeri</h2>
-    <form class="form-horizontal" role="form" method="POST" action="registerAnswer">
-        <div class="form-group">
-            <label for="username">Kasutajanimi</label>
-            <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+
+<?php
+
+function getCookieValue($name)
+{
+    return isset($_COOKIE[$name]) ? $_COOKIE[$name] : null;
+}
+
+// Извлекаем значение языка из Cookie
+$lang_active = getCookieValue('lang');
+
+
+// Если язык не найден в Cookie или не установлен, используем язык по умолчанию 'est'
+if (!$lang_active) {
+    $lang_active = 'est';
+}
+
+echo "
+<div class='form-container'>
+    <h2 id='reg__name' class='text-center mb-4'>" . ($lang_active === 'ru' ? 'Регистрация' : 'Registreeri') . "</h2>
+    <form class='form-horizontal' role='form' method='POST' action='registerAnswer'>
+        <div class='form-group'>
+            <label id='username__name' for='username'>" . ($lang_active === 'ru' ? 'Имя пользователя' : 'Kasutajanimi') . "</label>
+            <input id='name' type='text' class='form-control' name='name' value='' required autofocus>
         </div>
-        <div class="form-group">
-            <label for="email">E-post</label>
-            <input id="email" type="email" class="form-control" name="email" value="" required>
+        <div class='form-group'>
+            <label id='email__name' for='email'>" . ($lang_active === 'ru' ? 'Э-почта' : 'E-post') . "</label>
+            <input id='email' type='email' class='form-control' name='email' value='' required>
         </div>
-        <div class="form-group">
-            <label for="password">Parool</label>
-            <input id="password" type="password" class="form-control" name="password" required>
+        <div class='form-group'>
+            <label id='password__name' for='password'>" . ($lang_active === 'ru' ? 'Пароль' : 'Parool') . "</label>
+            <input id='password' type='password' class='form-control' name='password' required>
         </div>
-        <div class="form-group">
-            <label for="confirm_password">Kinnita parool</label>
-            <input id="password-confirm" type="password" class="form-control" name="confirm" required>
+        <div class='form-group'>
+            <label id='password__confirm__name' for='confirm_password'>" . ($lang_active === 'ru' ? 'Подтвердите пароль' : 'Kinnita parool') . "</label>
+            <input id='password-confirm' type='password' class='form-control' name='confirm' required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block" name="save">Registreeri</button>
+        <button id='btn_reg__name' type='submit' class='btn btn-primary btn-block' name='save'>" . ($lang_active === 'ru' ? 'Зарегистрироваться ' : 'Registreeri') . "</button>
     </form>
 
-    <div class="mt-4 text-center">
-        <a href="./" class="btn btn-secondary btn-sm" role="button">Tagasi saidile</a>
+    <div class='mt-4 text-center'>
+        <a id='home__page__name' href='./' class='btn btn-secondary btn-sm' role='button'>" . ($lang_active === 'ru' ? 'Вернуться на главную страницу' : 'Tagasi saidile') . "</a>
     </div>
-
 </div>
+"
+
+?>
+
 
 <!-- Lisame Bootstrap JS-i (vajalik teatud komponentide töötamiseks) -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
