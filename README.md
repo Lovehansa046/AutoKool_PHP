@@ -58,6 +58,11 @@ Before setting up the application, ensure you have the following installed:
 
    - Start your web server.
    - Access the application via your browser (e.g., `http://localhost/autokool`).
+  
+## Usage
+
+- Reader: Browse through categories, read articles, and use the search functionality to find specific articles.
+- Author: Register as an author, log in, and start creating new articles. Authors can also edit or delete their own articles.
 
 ## Folder Structure
 
@@ -78,10 +83,14 @@ Contributions are welcome! If you want to contribute to this project, please fol
 5. Push to the branch (`git push origin feature/your-feature`).
 6. Create a new Pull Request.
 
-## License
+## Acknowledgements
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- PHP: Server-side scripting language.
 
-## Contact
+- MySQL: Relational database management system.
 
-For any inquiries or issues, please contact us at autokool@example.com.
+- phpMyAdmin: Web-based administration tool for MySQL databases.
+
+## **P.S**
+Feel free to customize and enhance this news portal according to your needs. Happy coding! 🚀
+
