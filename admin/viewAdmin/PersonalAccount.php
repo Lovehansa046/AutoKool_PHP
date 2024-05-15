@@ -1,14 +1,27 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+$lang_active = getCookieValue('lang');
+?>
 
 <div class="profile-card">
-    <h2>Isiklik konto</h2>
+    <?php
+    echo '
+    <h2>'. ($lang_active === "ru" ? "Личный кабинет" : "Isiklik konto") .'</h2>
+    '
+    ?>
     <form>
-        <div class="form-group">
-            <label for="username">Kasutajanimi</label>
+        <div class="form-group"><?php
+        echo '
+            <label for="username">'. ($lang_active === "ru" ? "Имя пользователя" : "Kasutajanimi") .'</label>
+            '
+        ?>
             <input type="text" class="form-control" id="username" value="<?php echo htmlspecialchars($_SESSION["name"]); ?>" disabled>
         </div>
         <div class="form-group">
-            <label for="email">E-post</label>
+        <?php
+        echo '
+            <label for="email">'. ($lang_active === "ru" ? "Э-почта" : "E-post") .'</label>
+            '
+            ?>
             <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($_SESSION["email"]); ?>" disabled>
         </div>
 <!--        <div class="form-group">-->
@@ -26,7 +39,11 @@
 <!--        <a href="#" class="text-danger">Kustuta konto</a>-->
 <!--    </div>-->
     <div class="text-center mt-3">
-        <a href="logout" class="btn btn-outline-danger">Logi välja <i class="fas fa-sign-out-alt"></i></a>
+    <?php
+    echo '
+        <a href="logout" class="btn btn-outline-danger">'. ($lang_active === "ru" ? "Выйти" : "Logi valja    ") .' <i class="fas fa-sign-out-alt"></i></a>
+        '
+        ?>
     </div>
 
 </div>
