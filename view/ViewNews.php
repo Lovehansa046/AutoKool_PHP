@@ -3,7 +3,7 @@
 class ViewNews
 {
 
-    public static function newsByCategory($arr)
+    public static function newsByCategory($arr,$lang_active)
     {
         foreach ($arr as $value) {
 
@@ -11,8 +11,8 @@ class ViewNews
     color: #fff;
     padding: 20px 0;
     text-align: center; justify-content: center' class='header'>
-                    <h1>Autokool 'Uus juht'</h1>
-                    <p style='justify-content: center'>Parim koht sõitmise õppimiseks!</p>
+                    <h1>". ($lang_active === 'ru' ? 'Автошкола Uus juht' : 'Autokool Uus juht'). "</h1>
+                    <p style='justify-content: center'>". ($lang_active === 'ru' ? 'Лучшее место для обучения вождению!' : 'Parim koht sõitmise õppimiseks!'). "</p>
                   </div>
             <div style='flex: 1; /* Занимает всю доступную высоту (оставшуюся часть) */
     max-width: 800px;
@@ -24,7 +24,8 @@ class ViewNews
             <h2 style='font-size: 24px; color: #007bff; text-align: center;margin-bottom: 20px;' class='category-title'>
             " . $value["category_name_est"] . "</h2>
             <p style='font-size: 18px; line-height: 1.6; margin-bottom: 20px;' class='category-description' >
-            " . $value["category_description_est"] . "</p >
+            " . ($lang_active === 'ru' ?  $value ['category_description_rus']  :  $value ['category_description_est'] )."
+            </p >
             <p style='font-size: 20px;
     font-weight: bold;
     color: #333; justify-content: center;' class='category-price' > " . $value["category_price"] . "</p >
