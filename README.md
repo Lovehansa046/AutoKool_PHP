@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# AutoKool
-=======
+
 # `AutoKool_PHP`
 
 This repository contains the source code for the Autokool web application, which is built using PHP and relies on a database to manage driving school operations.
