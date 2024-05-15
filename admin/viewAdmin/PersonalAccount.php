@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php ob_start(); 
 $lang_active = getCookieValue('lang');
 ?>
@@ -24,6 +25,8 @@ $lang_active = getCookieValue('lang');
             '
             ?>
 =======
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 <?php ob_start(); ?>
 
 <div class="profile-card">
@@ -35,7 +38,10 @@ $lang_active = getCookieValue('lang');
         </div>
         <div class="form-group">
             <label for="email">E-post</label>
+<<<<<<< HEAD
 >>>>>>> 234c80a7aef3e775749dac95c6a0f42048624d4d
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
             <input type="email" class="form-control" id="email" value="<?php echo htmlspecialchars($_SESSION["email"]); ?>" disabled>
         </div>
 <!--        <div class="form-group">-->
@@ -54,6 +60,7 @@ $lang_active = getCookieValue('lang');
 <!--    </div>-->
     <div class="text-center mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <?php
     echo '
         <a href="logout" class="btn btn-outline-danger">'. ($lang_active === "ru" ? "Выйти" : "Logi valja    ") .' <i class="fas fa-sign-out-alt"></i></a>
@@ -62,6 +69,9 @@ $lang_active = getCookieValue('lang');
 =======
         <a href="logout" class="btn btn-outline-danger">Logi välja <i class="fas fa-sign-out-alt"></i></a>
 >>>>>>> 234c80a7aef3e775749dac95c6a0f42048624d4d
+=======
+        <a href="logout" class="btn btn-outline-danger">Logi välja <i class="fas fa-sign-out-alt"></i></a>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     </div>
 
 </div>

@@ -106,6 +106,7 @@ class ModelAdminNews
     }
 
 
+<<<<<<< HEAD
 
     //Метод удаление заявки, без применения систем PDO
 //    public static function getNewsDelete($application_id)
@@ -113,6 +114,56 @@ class ModelAdminNews
 //        $test = false;
 //        if (isset($_POST['save'])) {
 //            $sql = "DELETE FROM `application` WHERE `application_id`.`application_id` = " . $application_id;
+=======
+    // News Edit
+//    public static function getNewsEdit($id)
+//    {
+//        $test = false;
+//        if (isset($_POST['save'])) {
+//            if (isset($_POST['title']) && isset($_POST['text']) && isset($_POST['idCategory'])) {
+//
+//                $title = $_POST['title'];
+//                $text = $_POST['text'];
+//                $idCategory = $_POST['idCategory'];
+//
+//                // Images type blob
+//                $image = $_FILES['picture']['name'];
+//                if ($image != "") {
+//                    $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+//
+//                    // Images type text (Saves img to folder)
+//                    // $uploaddir = '../images/';
+//                    // $uploadfile = $uploaddir . basename($_FILES['picture']['name']);
+//                    // copy($_FILES['picture']['tmp_name'], $uploadfile);
+//                }
+//                // ----------------
+//                if ($image == "") {
+//                    $sql = "UPDATE `news` SET `title` = '$title', `text` = '$text',
+//                    `category_id` = '$idCategory' WHERE `news`.`id` = " . $id;
+//                } else {
+//                    $sql = "UPDATE `news` SET `title` = '$title', `text` = '$text',
+//                    `picture`='$image', `category_id` = '$idCategory' WHERE `news`.`id` = " . $id;
+//                }
+//
+//                $db = new Database();
+//                $item = $db->executeRun($sql);
+//                if ($item == true) {
+//                    $test = true;
+//                }
+//            }
+//        }
+//        return $test;
+//    }
+
+    // Delete
+
+
+//    public static function getNewsDelete($id)
+//    {
+//        $test = false;
+//        if (isset($_POST['save'])) {
+//            $sql = "DELETE FROM `news` WHERE `news`.`id` = " . $id;
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 //            $db = new Database();
 //            $item = $db->executeRun($sql);
 //            if ($item == true) {
@@ -122,8 +173,86 @@ class ModelAdminNews
 //        return $test;
 //    }
 
+<<<<<<< HEAD
 
     //Метод удаление заявки, посредством костыля и создание дополнительной функции executeRun__2, так как функция ранее, не хотела принимать переменную $params
+=======
+//    public static function getNewsDelete($newsId)
+//    {
+//        $db = new Database();
+//
+//        // Удаляем связанные комментарии
+//        $deleteCommentsSql = "DELETE FROM `comments` WHERE `news_id` = :news_id";
+//        $params = [':news_id' => $newsId];
+//        $db->executePreparedStatement($deleteCommentsSql, $params);
+//
+//        // Затем удаляем новость
+//        $deleteNewsSql = "DELETE FROM `news` WHERE `id` = :news_id";
+//        $db->executePreparedStatement($deleteNewsSql, $params);
+//
+//        // Возвращаем успешное завершение операции
+//        return true;
+//    }
+
+
+//    public static function getNewsDelete($application_id)
+//    {
+//        $test = false;
+//
+//        if (isset($_POST['save'])) {
+//            $db = new Database();
+//
+//            try {
+//                // Подготовленный запрос на удаление новости
+//                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
+//                $params = [':application_id' => $application_id];
+//
+//                $stmt = $db->executeRun($sql, $params); // Выполнение подготовленного запроса
+//
+//
+////                 Проверка успешности выполнения запроса
+//                if ($stmt->rowCount() > 0) {
+//                    $test = true;
+//                }
+//            } catch (PDOException $e) {
+//                // Обработка ошибки выполнения запроса
+//                echo "Ошибка выполнения запроса: " . $e->getMessage();
+//            }
+//        }
+//
+//        return $test;
+//    }
+
+//    public static function getNewsDelete($application_id)
+//    {
+//        $test = false;
+//
+//        if (isset($_POST['save'])) {
+//            $db = new Database();
+//
+//            try {
+//                // Подготовить SQL запрос с использованием именованного параметра
+//                $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
+//
+//                // Подставить параметры в массиве для выполнения запроса
+//                $params = [':application_id' => $application_id];
+//
+//                // Выполнить подготовленный запрос с параметрами
+//                $stmt = $db->executeRun($sql, $params);
+//
+//                // Проверить, были ли затронуты какие-либо строки
+//                if ($stmt->rowCount() > 0) {
+//                    $test = true;
+//                }
+//            } catch (PDOException $e) {
+//                // Обработать исключение PDO
+//                echo "Ошибка выполнения запроса: " . $e->getMessage();
+//            }
+//        }
+//
+//        return $test;
+//    }
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     public static function getNewsDelete($application_id)
     {
         $test = false;
@@ -135,7 +264,11 @@ class ModelAdminNews
                 $sql = "DELETE FROM `application` WHERE `application_id` = :application_id";
                 $params = [':application_id' => $application_id];
 
+<<<<<<< HEAD
                 $stmt = $db->executePreparedStatement($sql, $params);
+=======
+                $stmt = $db->executeRun__2($sql, $params);
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
                 // Kontrolli, kas mõjutati mingeid ridu
                 if ($stmt instanceof PDOStatement && $stmt->rowCount() > 0) {
@@ -154,4 +287,8 @@ class ModelAdminNews
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 }  // class

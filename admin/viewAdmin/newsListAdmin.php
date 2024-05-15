@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 <?php ob_start();
 
 $lang_active = getCookieValue('lang');
 ?>
+=======
+<?php ob_start(); ?>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
 <h2>Päringute nimekiri</h2>
 
@@ -24,24 +28,40 @@ $lang_active = getCookieValue('lang');
                 array('category_id' => 3, 'category_name_est' => 'C'),
             );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
             foreach ($arr as $row) {
                 echo '<tr>';
 
                 echo '<td>' . $row['application_id'] . '</td>';
 
+<<<<<<< HEAD
                 echo '<td><b>' . ($lang_active === "ru" ? "Имя:" : " Nimi:") . ' </b>' . $row['name'] . '<br>';
                 echo '<b>' . ($lang_active === "ru" ? "Фамилия:" : " Perenimi:") . ' </b><i>' . $row['lastname'] . '</i><br>';
                 echo '<b>' . ($lang_active === "ru" ? "Категория:" : " Kategooria:") . ' </b><i>' . getCategoryName($row['category_id'], $categories) . '</i><br>';
 
+=======
+                echo '<td><b>Nimi: </b>' . $row['name'] . '<br>';
+                echo '<b>Perenimi: </b><i>' . $row['lastname'] . '</i><br>';
+                echo '<b>Kategooria: </b><i>' . getCategoryName($row['category_id'], $categories) . '</i><br>';
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
                 echo '</td>';
 
                 echo '<td>
+<<<<<<< HEAD
                     
                     <a href="newsDel?application_id=' . $row['application_id'] . '">' . ($lang_active === "ru" ? "Удалить" : " Kustuta") . ' <span class="glyphicon
                     glyphicon-remove" aria-hidden="true"></span></a>
                     </td>';
+=======
+        
+        <a href="newsDel?application_id=' . $row['application_id'] . '">Kustuta <span class="glyphicon
+        glyphicon-remove" aria-hidden="true"></span></a>
+        </td>';
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
                 echo '</tr>';
             }
@@ -56,6 +76,10 @@ $lang_active = getCookieValue('lang');
                 return 'Tundmatu';
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
             ?>
         </table>
     </div>

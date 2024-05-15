@@ -73,6 +73,7 @@
 </head>
 <body>
 <div class="container">
+<<<<<<< HEAD
     <?php
 
 
@@ -88,6 +89,15 @@
                 <div class="container">
                     <!-- Logo -->
                     <a id="Veebileht__name" class="navbar-brand" href="../" target="_blank">' . ($lang_active === "ru" ? "Главная страница" : " VEEBILEHT") . '</a>;
+=======
+    <?php if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"])) : ?>
+
+        <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") : ?>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="../" target="_blank">VEEBILEHT</a>;
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
                     <!-- Burger-nupp mobiilsetele seadmetele -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -100,6 +110,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a id="category__name" class="nav-link" href="categoryAdmin">' . ($lang_active === "ru" ? "Категории" : " Kategooriad") . '</a>
                             </li>
                             <li class="nav-item">
@@ -110,11 +121,24 @@
                             </li>
                             <li class="nav-item">
                                 <a id="exit" class="nav-link" href="logout">' . ($lang_active === "ru" ? "Выйти" : " Logi välja") . ' <i class="fas fa-sign-out-alt"></i></a>
+=======
+                                <a class="nav-link" href="categoryAdmin">Kategooriad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="newsAdmin">Päring</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout">Logi välja <i class="fas fa-sign-out-alt"></i></a>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
             ' ?>
 =======
@@ -132,6 +156,14 @@
                 <div class="container">
                     <!-- Logo -->
                     <a id="Veebileht__name" class="navbar-brand" href="../" target="_blank">' . ($lang_active === "ru" ? "Главная страница" : " VEEBILEHT") . '</a>;
+=======
+
+        <?php elseif (isset($_SESSION["status"]) && $_SESSION["status"] == "user") : ?>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="../" target="_blank">VEEBILEHT</a>;
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
                     <!-- Burger-nupp mobiilsetele seadmetele -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -144,6 +176,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a id="Päring" class="nav-link" href="newsUser">' . ($lang_active === "ru" ? "Запросы" : " Päring") . '</a>
                             </li>
                             <li class="nav-item">
@@ -151,11 +184,21 @@
                             </li>
                             <li class="nav-item">
                                 <a id="exit" class="nav-link" href="logout">' . ($lang_active === "ru" ? "Выйти " : " Logi välja") . ' <i class="fas fa-sign-out-alt"></i></a>
+=======
+                                <a class="nav-link" href="newsUser">Päring</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="PersonalAccount">Isiklik ala</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout">Logi välja <i class="fas fa-sign-out-alt"></i></a>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+<<<<<<< HEAD
             ' ?>
         <?php endif; ?>
 
@@ -172,12 +215,24 @@
         </div>
         '
         ?>
+=======
+        <?php endif; ?>
+
+    <?php else : ?>
+        <!-- Teade volitamata kasutajatele -->
+        <div style="padding: 20px; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 5px;">
+            <h4 style="margin-top: 0;">Teil puuduvad õigused!</h4>
+            <p>Vabandame, teil puuduvad selle lehe vaatamiseks või toimingu tegemiseks vajalikud õigused.</p>
+            <p>Pöörduge administraatori poole või hankige vajalikud õigused jätkamiseks.</p>
+        </div>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     <?php endif; ?>
 </div>
 
 <div id="content" style="padding-top:20px;">
     <?php echo $content; ?>
 </div>
+<<<<<<< HEAD
 
 <!--<script>-->
 <!--    // Функция для изменения языка-->
@@ -256,6 +311,8 @@
 <!--        updatePageText('ru');-->
 <!--    });-->
 <!--</script>-->
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 <!-- Bootstrapi JS-i lisamine (mõnede komponentide toimimiseks on vajalik) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
 </body>

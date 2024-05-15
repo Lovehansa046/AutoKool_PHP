@@ -1,5 +1,6 @@
 <?php
 ob_start();
+<<<<<<< HEAD
 
 function getCookieValue($name)
 {
@@ -14,6 +15,8 @@ $lang_active = getCookieValue('lang');
 if (!$lang_active) {
     $lang_active = 'est';
 }
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 ?>
     <style>
         body {
@@ -78,6 +81,7 @@ if (!$lang_active) {
             margin-bottom: 50px;
         }
     </style>
+<<<<<<< HEAD
     <div class="container" id="AutoJuht"></div>
 
 <script>
@@ -150,6 +154,13 @@ if (!$lang_active) {
 
 <?php
 Viewpersonal::viewPersonals($arr, $lang_active);
+=======
+    <div class="container"> Meie Autojuht!</div>
+
+
+<?php
+Viewpersonal::viewPersonals($arr);
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 $content = ob_get_clean();
 include_once 'view/layout.php';
 

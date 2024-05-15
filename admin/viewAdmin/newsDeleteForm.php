@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php ob_start(); 
 $lang_active = getCookieValue('lang');
 ?>
 =======
 <?php ob_start(); ?>
 >>>>>>> 234c80a7aef3e775749dac95c6a0f42048624d4d
+=======
+<?php ob_start(); ?>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 
 <div class="container" style="min-height:400px;">
     <div class="col-md-11">

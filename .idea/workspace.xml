@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="изменение языка" />
+=======
+    <list default="true" id="cddafd51-4b74-411c-9288-2c546cb4bf2a" name="Changes" comment="Добавление заявки пользователем">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_main.css" afterDir="false" />
+    </list>
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,13 +56,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/xampp/htdocs/AutoKool_PHP",
+=======
+    "last_opened_file_path": "/Applications/XAMPP/xamppfiles/htdocs/AutoKool_PHP_2",
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+=======
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,8 +104,11 @@
       <workItem from="1714399185206" duration="4445000" />
       <workItem from="1715012253146" duration="165000" />
       <workItem from="1715031301603" duration="207000" />
+<<<<<<< HEAD
       <workItem from="1715718522821" duration="9000" />
       <workItem from="1715754085392" duration="189000" />
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -180,6 +198,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714400459844</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00012" summary="Добавление заявки пользователем">
       <option name="closed" value="true" />
       <created>1715755381020</created>
@@ -213,6 +232,9 @@
       <updated>1715769775382</updated>
     </task>
     <option name="localTasksCounter" value="16" />
+=======
+    <option name="localTasksCounter" value="12" />
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +262,11 @@
     <MESSAGE value="изменение формы авторизации" />
     <MESSAGE value="Создание страницы с работниками" />
     <MESSAGE value="Добавление заявки пользователем" />
+<<<<<<< HEAD
     <MESSAGE value="изменение языка" />
     <option name="LAST_COMMIT_MESSAGE" value="изменение языка" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление заявки пользователем" />
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
   </component>
 </project>

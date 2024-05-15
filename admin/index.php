@@ -1,8 +1,11 @@
 <?php
 session_start();
 // session_destroy();
+<<<<<<< HEAD
 
 require_once '../inc/cookie.php';
+=======
+>>>>>>> c65e37a514936309e99c24d177af379eefb808f9
 require_once '../inc/Database.php';  // База данных
 
 include_once("modelAdmin/ModelAdmin.php");
