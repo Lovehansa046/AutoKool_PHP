@@ -13,15 +13,23 @@
     <link rel="stylesheet" href="style_main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <style>
-        footer {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            margin-top: auto;
-            /* Поднимаем footer вниз до конца видимой области */
+        html {
+            height: 100%; /* Задаем высоту html на весь экран */
+            display: flex;
+            flex-direction: column;
         }
+
+        body {
+            flex: 1; /* Растягиваем body на все доступное пространство */
+        }
+
+        footer {
+            background-color: #007bff; /* Цвет фона footer */
+            color: #fff; /* Цвет текста */
+            padding: 10px; /* Внутренний отступ */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+
     </style>
 </head>
 
